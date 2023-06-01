@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- CONNECT IT TO CSS-->
+    <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <!-- FIREBASE LINKS -->
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-firestore.js"></script>
+  </head>
+  <body>
+    <!-- LEON CICLE IN THE MIDDLE -->
+    <section class="center">
+      <div class="circleOuter" id="circleOuter"></div>
+      <div class="circle1" id="circle1">
+        <div class="circle2" id="circle2">
+          <div class="circle3" id="circle3">
+            <h3>L E O N</h3>
+          </div>
+          <div class="circleOuter1" id="circleOuter1"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- THIS WILL OUTPUT THE LEON RESPONCES -->
+    <section class="centerBottom" id="leonResponce">
+      <div>
+        <p id="output" class="borderBox2"></p>
+      </div>
+    </section>
+
+    <!-- THIS WILL DISPLAY THE TIME IN THE RIGHT HAND CORNER OF THE SCREEN -->
+    <section class="rightTop">
+      <div>
+        <!-- DISPLAYS TIME -->
+        <h4 id="time"></h4>
+        <!-- DISPLAYS DATE -->
+        <h4 id="date"></h4>
+      </div>
+    </section>
+
+    <!-- CONSOLE LOG INFORMATION -->
+    <section class="centerBottomRight" id="centerBottomRight">
+      <div>
+        <h4>CONSOLE_LOG INFORMATIO</h4>
+      </div>
+      <div>
+        <p id="Consoleoutput" class="borderBox2"></p>
+      </div>
+    </section>
+
+    <!-- 
+
+        WIDGETS BELOW
+
+    -->
+    <!-- WIDGETS FOR STUFF THAT LEON CAN DO -->
+    <section id="whatcanyoudoWidget">
+      <div id="leon_whatcanyoudo" class="draggable">
+        <button
+          type="button"
+          class="btn-close"
+          aria-label="Close"
+          onclick="closeWHATICANDO()"
+        >
+          X
+        </button>
+        <h1>WHAT I CAN DO</h1>
+        <div id="allReminders">
+          <ul>
+            <li>Have a conversation with you.</li>
+            <li>Set reminders for you.</li>
+            <li>Remember stuff</li>
+            <li>Tell you jokes</li>
+            <li>Have a intaractive and friendly UI</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- WIDGET FOR REMINDERS -->
+    <section id="remindersWidget">
+      <div id="leon_reminders" class="draggable">
+        <h1>REMINDERS</h1>
+        <div id="allReminders">
+          <ul id="allReminders2"></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- WIDGET FOR WEATHER -->
+    <section class="displayWeather" id="weatherWidget">
+      <div>
+        <h2 id="weatherHeader"></h2>
+      </div>
+      <div id="weatherBody"></div>
+      <div id="DressAproporiatly">
+        <p id="DressOutfit"></p>
+      </div>
+    </section>
+
+    <script src="Firebase/LEONFIREBASE.js"></script>
+    <script src="Greeting/LEONONSTARTGREETING.js"></script>
+    <script src="LEONTIMEANDDATE.js"></script>
+    <script src="LEONSPEECHRECOGNITION.js"></script>
+    <script src="MovableWidgets/MovableWhatCanIDo.js"></script>
+    <script src="MovableWidgets/MovableReminders.js"></script>
+    <script src="CloseWidgets/LEONCLOSEWIDGETS.js"></script>
+    <script src="Reminders/LEONSETREMINDER.js"></script>
+    <script src="Reminders/LEONCHECKFORREMINDER.js"></script>
+    <script src="Reminders/LEONDELETEREMINDERS.js"></script>
+    <script src="Reminders/LEONCLOSEREMINDERS.js"></script>
+    <script src="Weather/LEONGETWEATHER.js"></script>
+    <script src="Weather/LEONCLOSETHEWEATHER.js"></script>
+    <script src="WINDOWONLOAD/BackgroundCheck.js"></script>
+    <script src="CONSOLELOGINFORMATION/DisplayConsoleStuff.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

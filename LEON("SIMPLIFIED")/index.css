@@ -1,0 +1,440 @@
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+/* DECORATING THE BODY */
+body {
+  background-image: url("Pictures/blue.jpeg");
+  font-weight: lighter;
+  font-family: "Roboto", sans-serif;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  user-select: none;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+/* CENTER PIECE FOR LEON DECORATION */
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  animation-name: glitch;
+  animation-duration: 1s;
+}
+
+.circle1 {
+  border-radius: 50%;
+  width: 210px;
+  height: 210px;
+  background-color: #01314c71;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  animation: pulse 3s ease-in-out infinite;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  transform: rotate(45deg);
+  filter: drop-shadow(0 0 10px #0077c9);
+}
+
+.circle2 {
+  border-radius: 50%;
+  width: 180px;
+  height: 180px;
+  background-color: #0079c900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  animation: pulse 3s ease-in-out infinite;
+  animation-delay: -1.2s;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  transform: rotate(45deg) translate(-50px, 50px);
+  border: 1px solid white;
+}
+
+.circle3 {
+  border-radius: 50%;
+  width: 160px;
+  height: 160px;
+  background-color: #002439;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  animation: pulse 5s ease-in-out infinite;
+  animation-delay: -3s;
+  filter: drop-shadow(0 0 10px #0077c9);
+}
+
+#circleOuter {
+  border-radius: 100%;
+  width: 230px;
+  height: 230px;
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px solid white;
+  position: relative;
+  transform: rotate(-180deg);
+  animation: rotate-counter 5s infinite;
+  animation-direction: alternate;
+  -webkit-mask: linear-gradient(
+    to left,
+    transparent 50%,
+    rgb(255, 255, 255) 50%
+  );
+  mask: linear-gradient(to left, transparent 50%, rgb(255, 255, 255) 50%);
+  display: none;
+}
+
+#circleOuter1 {
+  border-radius: 100%;
+  width: 150px;
+  height: 150px;
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px solid white;
+  position: relative;
+  transform: rotate(-180deg);
+  animation: rotate 5s infinite;
+  animation-direction: alternate;
+  -webkit-mask: linear-gradient(
+    to left,
+    transparent 50%,
+    rgb(255, 255, 255) 50%
+  );
+  mask: linear-gradient(to left, transparent 50%, rgb(255, 255, 255) 50%);
+  display: none;
+}
+/* THIS IS AN ANIMATION FOR THE OUTER CIRCLES WHEN LEON SPEAKS */
+@keyframes rotate-counter {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-180deg);
+  }
+}
+/* THIS IS AN ANIMATION FOR THE OUTER CIRCLES WHEN LEON SPEAKS */
+@keyframes rotate-counter1 {
+  from {
+    transform: rotate(-180deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+h3 {
+  color: white;
+  font-size: 32px;
+}
+
+@keyframes rotate-clock {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* PULSE ANIMATION FOR LEON */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  80% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+/* ANIMATIONS */
+@keyframes glitch {
+  5% {
+    opacity: 0.6;
+  }
+  10% {
+    opacity: 0.2;
+  }
+  15% {
+    opacity: 0.6;
+  }
+  20% {
+    opacity: 0.2;
+  }
+  25% {
+    opacity: 0.6;
+  }
+  30% {
+    opacity: 0.2;
+  }
+  35% {
+    opacity: 0.6;
+  }
+  40% {
+    opacity: 0.2;
+  }
+}
+
+/* CENTER BOTTOM WILL DISPLAY LEONS OUTPUT */
+#leonResponce {
+  display: none;
+}
+.centerBottom {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.centerBottom P {
+  font-size: 20px;
+  font-weight: lighter;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.borderBox2 {
+  background-color: #003f6670;
+  color: #fff;
+  opacity: 0.8;
+  border-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/brace.svg)
+    70 70;
+  border-style: inset;
+  border-width: 15px;
+  padding: 0;
+  margin: 0;
+}
+/*
+/
+/
+/
+/
+/
+*/
+.log {
+  color: white;
+}
+
+.warn {
+  color: yellow;
+}
+
+.error {
+  color: red;
+}
+
+#Consoleoutput {
+  height: 200px;
+  overflow: auto;
+}
+
+#centerBottomRight {
+  width: 20%;
+  position: absolute;
+  right: 1%;
+  bottom: 5%;
+  height: 25%;
+  color: white;
+  display: block;
+  overflow: auto;
+}
+/*
+/
+/
+/
+/
+/* TOP RIGHT WILL DISPLAY THE TIME */
+.rightTop {
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  color: white;
+  font-weight: lighter;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+#time {
+  font-size: 25px;
+  font-weight: lighter;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+#date {
+  font-size: 15px;
+  font-weight: lighter;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  margin-top: 0;
+  padding-top: 0;
+}
+/* 
+/
+/
+/
+/
+/
+*/
+/* WIDGETS DECORATION BELOW */
+#remindersWidget {
+  display: none;
+  width: 30%;
+  height: 40%;
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  animation: glitch 0.2s;
+}
+
+#leon_reminders {
+  background-color: #6600051d;
+  color: #fff;
+  opacity: 0.8;
+  border-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/brace.svg)
+    70 70;
+  border-style: inset;
+  border-width: 30px;
+  transition: 0.5s;
+}
+
+#leon_reminders h1 {
+  margin: 0;
+  font-size: 24px;
+  text-shadow: 0 0 10px #005eff;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #014b90;
+}
+
+#allReminders2 {
+  color: white;
+}
+
+#leon_reminders li {
+  margin-top: 20px;
+}
+
+#whatcanyoudoWidget {
+  display: none;
+  width: 30%;
+  height: 40%;
+  position: absolute;
+  top: 30%;
+  right: 5%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  animation: glitch 0.2s;
+}
+
+#leon_whatcanyoudo {
+  background-color: #6600051d;
+  color: #fff;
+  opacity: 0.8;
+  border-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/brace.svg)
+    70 70;
+  border-style: inset;
+  border-width: 30px;
+  transition: 0.5s;
+}
+
+#leon_whatcanyoudo h1 {
+  margin: 0;
+  font-size: 24px;
+  text-shadow: 0 0 10px #00ffa6;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #00ffa6;
+}
+
+.btn-close {
+  background-color: #002439;
+  color: white;
+  border: 1px solid white;
+  margin-bottom: 2%;
+  position: absolute;
+  right: 5%;
+}
+
+#leon_whatcanyoudo li {
+  margin-top: 20px;
+}
+/*
+/
+/
+/
+/
+/
+*/
+#weatherWidget {
+  display: none;
+}
+
+.displayWeather {
+  position: absolute;
+  top: 3%;
+  left: 1%;
+  color: white;
+}
+
+#weatherHeader {
+  font-size: 30px;
+  padding-bottom: 5%;
+  font-weight: lighter;
+  font-family: "Roboto", sans-serif;
+  text-align: left;
+  border-bottom: 2px solid #0077c9;
+}
+
+.displayWeather li {
+  font-size: 17px;
+  font-weight: lighter;
+  font-family: "Roboto", sans-serif;
+  text-align: left;
+  margin: 0 0 6% 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#DressOutfit {
+  font-size: 17px;
+  font-weight: lighter;
+  font-family: "Roboto", sans-serif;
+  text-align: left;
+  margin: 0 0 6% 0;
+  padding: 0;
+}
